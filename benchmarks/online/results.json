@@ -1,0 +1,48 @@
+{
+  "agent": {
+    "completed": 6,
+    "total": 6,
+    "passed": 6,
+    "accuracy": 1.0,
+    "non_tool_total": 6,
+    "non_tool_accuracy": 1.0,
+    "average_model_calls": 2.6666666666666665,
+    "average_latency_s": 7.843684937333333,
+    "p95_latency_s": 18.424349833,
+    "average_tokens_per_task": 5181.666666666667,
+    "usage_coverage": 1.0,
+    "by_type": {
+      "rubric": {
+        "passed": 5,
+        "total": 5
+      },
+      "unanswerable": {
+        "passed": 1,
+        "total": 1
+      }
+    }
+  },
+  "baseline": {
+    "completed": 6,
+    "total": 6,
+    "passed": 1,
+    "accuracy": 0.16666666666666666,
+    "non_tool_total": 6,
+    "non_tool_accuracy": 0.16666666666666666,
+    "average_model_calls": 1.0,
+    "average_latency_s": 2.597042201166668,
+    "p95_latency_s": 4.549138791999994,
+    "average_tokens_per_task": 326.3333333333333,
+    "usage_coverage": 1.0,
+    "by_type": {
+      "rubric": {
+        "passed": 0,
+        "total": 5
+      },
+      "unanswerable": {
+        "passed": 1,
+        "total": 1
+      }
+    }
+  }
+}

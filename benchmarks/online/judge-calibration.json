@@ -1,0 +1,132 @@
+[
+  {
+    "answer": "4096 rays; Nc=64 coarse coordinates and Nf=128 additional fine coordinates; PDF p.9.",
+    "expected_pass": true,
+    "grade": {
+      "passed": true,
+      "status": "ok",
+      "checks": [
+        {
+          "criterion": "Correct",
+          "passed": true,
+          "reason": "The answer states 4096 rays, Nc=64 coarse coordinates, and Nf=128 additional fine coordinates, matching the reference facts."
+        },
+        {
+          "criterion": "Grounded",
+          "passed": true,
+          "reason": "The answer's claims are supported by the reference source, which specifies 4096 rays, Nc=64, and Nf=128 on PDF page 9."
+        },
+        {
+          "criterion": "Complete",
+          "passed": true,
+          "reason": "The answer includes the batch unit and size (4096 rays), Nc (64), and Nf (128), covering all requested values."
+        },
+        {
+          "criterion": "In policy",
+          "passed": true,
+          "reason": "The answer does not fabricate facts or claim unavailable access; it cites PDF page 9 as required."
+        },
+        {
+          "criterion": "Task item 1: Correct unit and all three values.",
+          "passed": true,
+          "reason": "The answer provides the correct unit (rays) and all three values: 4096, 64, and 128."
+        },
+        {
+          "criterion": "Task item 2: Cites PDF page 9 and uses retrieved full-text evidence, not the abstract.",
+          "passed": true,
+          "reason": "The answer explicitly cites 'PDF p.9' and the reference source confirms the facts are from PDF page 9, not the abstract."
+        }
+      ],
+      "judge_latency_s": 3.8841225,
+      "judge_usage": {
+        "prompt_tokens": 402,
+        "completion_tokens": 344,
+        "total_tokens": 746,
+        "prompt_tokens_details": "[REDACTED]",
+        "prompt_cache_hit_tokens": "[REDACTED]",
+        "prompt_cache_miss_tokens": "[REDACTED]"
+      },
+      "judge_attempts": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "latency_s": 3.880820333999999,
+          "usage": {
+            "prompt_tokens": 402,
+            "completion_tokens": 344,
+            "total_tokens": 746,
+            "prompt_tokens_details": "[REDACTED]",
+            "prompt_cache_hit_tokens": "[REDACTED]",
+            "prompt_cache_miss_tokens": "[REDACTED]"
+          }
+        }
+      ],
+      "judge_response": "{\n  \"checks\": [\n    {\n      \"criterion\": \"Correct\",\n      \"passed\": true,\n      \"reason\": \"The answer states 4096 rays, Nc=64 coarse coordinates, and Nf=128 additional fine coordinates, matching the reference facts.\"\n    },\n    {\n      \"criterion\": \"Grounded\",\n      \"passed\": true,\n      \"reason\": \"The answer's claims are supported by the reference source, which specifies 4096 rays, Nc=64, and Nf=128 on PDF page 9.\"\n    },\n    {\n      \"criterion\": \"Complete\",\n      \"passed\": true,\n      \"reason\": \"The answer includes the batch unit and size (4096 rays), Nc (64), and Nf (128), covering all requested values.\"\n    },\n    {\n      \"criterion\": \"In policy\",\n      \"passed\": true,\n      \"reason\": \"The answer does not fabricate facts or claim unavailable access; it cites PDF page 9 as required.\"\n    },\n    {\n      \"criterion\": \"Task item 1: Correct unit and all three values.\",\n      \"passed\": true,\n      \"reason\": \"The answer provides the correct unit (rays) and all three values: 4096, 64, and 128.\"\n    },\n    {\n      \"criterion\": \"Task item 2: Cites PDF page 9 and uses retrieved full-text evidence, not the abstract.\",\n      \"passed\": true,\n      \"reason\": \"The answer explicitly cites 'PDF p.9' and the reference source confirms the facts are from PDF page 9, not the abstract.\"\n    }\n  ]\n}"
+    }
+  },
+  {
+    "answer": "NeRF uses batch size 17 bananas and Nc=3, Nf=5; PDF page 99.",
+    "expected_pass": false,
+    "grade": {
+      "passed": false,
+      "status": "ok",
+      "checks": [
+        {
+          "criterion": "Correct",
+          "passed": false,
+          "reason": "Candidate states batch size 17 bananas and Nc=3, Nf=5, which contradict reference values of 4096 rays, Nc=64, Nf=128."
+        },
+        {
+          "criterion": "Grounded",
+          "passed": false,
+          "reason": "No evidence provided; candidate claims are not supported by any source passages."
+        },
+        {
+          "criterion": "Complete",
+          "passed": false,
+          "reason": "Candidate fails to provide correct batch unit and size, and incorrect Nc and Nf values."
+        },
+        {
+          "criterion": "In policy",
+          "passed": false,
+          "reason": "Candidate fabricates values (17 bananas, Nc=3, Nf=5) not present in any source."
+        },
+        {
+          "criterion": "Task item 1: Correct unit and all three values.",
+          "passed": false,
+          "reason": "Candidate gives incorrect unit (bananas instead of rays) and incorrect values for batch size, Nc, and Nf."
+        },
+        {
+          "criterion": "Task item 2: Cites PDF page 9 and uses retrieved full-text evidence, not the abstract.",
+          "passed": false,
+          "reason": "Candidate cites PDF page 99, not page 9, and provides no retrieved full-text evidence."
+        }
+      ],
+      "judge_latency_s": 9.426011166999999,
+      "judge_usage": {
+        "prompt_tokens": 402,
+        "completion_tokens": 318,
+        "total_tokens": 720,
+        "prompt_tokens_details": "[REDACTED]",
+        "prompt_cache_hit_tokens": "[REDACTED]",
+        "prompt_cache_miss_tokens": "[REDACTED]"
+      },
+      "judge_attempts": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "latency_s": 9.422726832999999,
+          "usage": {
+            "prompt_tokens": 402,
+            "completion_tokens": 318,
+            "total_tokens": 720,
+            "prompt_tokens_details": "[REDACTED]",
+            "prompt_cache_hit_tokens": "[REDACTED]",
+            "prompt_cache_miss_tokens": "[REDACTED]"
+          }
+        }
+      ],
+      "judge_response": "{\n  \"checks\": [\n    {\n      \"criterion\": \"Correct\",\n      \"passed\": false,\n      \"reason\": \"Candidate states batch size 17 bananas and Nc=3, Nf=5, which contradict reference values of 4096 rays, Nc=64, Nf=128.\"\n    },\n    {\n      \"criterion\": \"Grounded\",\n      \"passed\": false,\n      \"reason\": \"No evidence provided; candidate claims are not supported by any source passages.\"\n    },\n    {\n      \"criterion\": \"Complete\",\n      \"passed\": false,\n      \"reason\": \"Candidate fails to provide correct batch unit and size, and incorrect Nc and Nf values.\"\n    },\n    {\n      \"criterion\": \"In policy\",\n      \"passed\": false,\n      \"reason\": \"Candidate fabricates values (17 bananas, Nc=3, Nf=5) not present in any source.\"\n    },\n    {\n      \"criterion\": \"Task item 1: Correct unit and all three values.\",\n      \"passed\": false,\n      \"reason\": \"Candidate gives incorrect unit (bananas instead of rays) and incorrect values for batch size, Nc, and Nf.\"\n    },\n    {\n      \"criterion\": \"Task item 2: Cites PDF page 9 and uses retrieved full-text evidence, not the abstract.\",\n      \"passed\": false,\n      \"reason\": \"Candidate cites PDF page 99, not page 9, and provides no retrieved full-text evidence.\"\n    }\n  ]\n}"
+    }
+  }
+]

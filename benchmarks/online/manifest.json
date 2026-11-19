@@ -1,0 +1,29 @@
+{
+  "status": "frozen before first formal paid run; source PDFs downloaded and indexed",
+  "verified_date": "2026-11-18",
+  "verification": "Public versioned PDFs inspected through browser PDF text extraction; references are short factual paraphrases, not redistributed full text",
+  "papers": [
+    {
+      "id": "2003.08934v2",
+      "url": "https://arxiv.org/pdf/2003.08934v2",
+      "pdf_sha256": "c7fc70b38f84cb2e42890a69a7c9b9c26ded464b221e0355031004f24fb8e727",
+      "bytes": 8274228,
+      "downloaded_utc": "2026-11-19T02:57:07.588655+00:00",
+      "parser": "pypdf/6.21.4",
+      "page_count": 25,
+      "index_sha256": "469a8ebe1a43d58d969daedefd891bf9ce549fde34604575f3c8f768c475d584"
+    },
+    {
+      "id": "2006.11239v2",
+      "url": "https://arxiv.org/pdf/2006.11239v2",
+      "pdf_sha256": "aee5e07a802e8dfd2a386374c94fd61d1d056cb7e1e0fec4f28e8120ff5d8505",
+      "bytes": 10267274,
+      "downloaded_utc": "2026-11-19T02:57:14.619554+00:00",
+      "parser": "pypdf/6.21.4",
+      "page_count": 25,
+      "index_sha256": "abb1cb255b8f1daa8b9168441bd5c5caa6748d249c7c2ec8dd1b4affc22e239a"
+    }
+  ],
+  "tasks_sha256": "ffd4b76c05c93f664ef23f5643ed181cc89fadc18b89eb2836683a8bc583eec8",
+  "robustness_sha256": "66c75ca1c7b2fc61786bea421a37604475c37868d86b3b2c5a7429baa112b40a"
+}

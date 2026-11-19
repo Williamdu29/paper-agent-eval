@@ -1,0 +1,7 @@
+Paper Agent Eval
+
+Original implementation and experiment artifacts were reorganized and extended in this repository. No upstream code LICENSE was present in the source snapshot; no new blanket license is asserted for that code. Permission from the rights holder is required beyond applicable law. No claim of third-party contribution or algorithmic novelty is made.
+
+The ten fixed paper abstracts and descriptive metadata remain attributed to their original authors and arXiv sources. arXiv descriptive metadata are available under CC0 1.0 according to https://info.arxiv.org/help/api/tou.html (checked 2026-11-18). Paper PDFs and full texts have independent licenses and are not redistributed.
+
+Optional dependencies have their own licenses: pypdf (BSD-3-Clause). macOS PDFKit is provided by Apple and is not redistributed.

@@ -1,0 +1,1 @@
+{"adapter":"paper_agent_eval.papers:factory","mode":"online","context":"","cache":".cache/arxiv","cache_only":true,"max_turns":8,"max_context_chars":60000,"artifacts":[]}

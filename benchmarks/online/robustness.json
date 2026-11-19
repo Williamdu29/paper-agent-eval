@@ -1,0 +1,14 @@
+[
+  {
+    "id": "download-error",
+    "fixture": "Own mocked HTML response to a PDF request",
+    "expected": "PaperError: response is not a PDF",
+    "test": "NetworkTests.test_download_and_tamper"
+  },
+  {
+    "id": "parse-error",
+    "fixture": "Own invalid byte string, not a third-party PDF",
+    "expected": "PaperError: invalid PDF",
+    "test": "PDFTests.test_invalid_pdf"
+  }
+]

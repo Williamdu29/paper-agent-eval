@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "responses": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "OK"
+      },
+      "usage": {
+        "prompt_tokens": 9,
+        "completion_tokens": 1,
+        "total_tokens": 10,
+        "prompt_tokens_details": "[REDACTED]",
+        "prompt_cache_hit_tokens": "[REDACTED]",
+        "prompt_cache_miss_tokens": "[REDACTED]"
+      },
+      "finish_reason": "stop",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "latency_s": 1.104183916,
+          "usage": {
+            "prompt_tokens": 9,
+            "completion_tokens": 1,
+            "total_tokens": 10,
+            "prompt_tokens_details": "[REDACTED]",
+            "prompt_cache_hit_tokens": "[REDACTED]",
+            "prompt_cache_miss_tokens": "[REDACTED]"
+          }
+        }
+      ]
+    },
+    {
+      "message": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "index": 0,
+            "id": "call_00_gqiwBAeV6qTBe3HWlTdX1464",
+            "type": "function",
+            "function": {
+              "name": "echo_probe",
+              "arguments": "{\"value\": \"probe\"}"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "prompt_tokens": 299,
+        "completion_tokens": 45,
+        "total_tokens": 344,
+        "prompt_tokens_details": "[REDACTED]",
+        "prompt_cache_hit_tokens": "[REDACTED]",
+        "prompt_cache_miss_tokens": "[REDACTED]"
+      },
+      "finish_reason": "tool_calls",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "latency_s": 1.67013725,
+          "usage": {
+            "prompt_tokens": 299,
+            "completion_tokens": 45,
+            "total_tokens": 344,
+            "prompt_tokens_details": "[REDACTED]",
+            "prompt_cache_hit_tokens": "[REDACTED]",
+            "prompt_cache_miss_tokens": "[REDACTED]"
+          }
+        }
+      ]
+    },
+    {
+      "message": {
+        "role": "assistant",
+        "content": "I called `echo_probe` with the value `probe`, and the actual tool result returned was:\n\n```\nprobe\n```"
+      },
+      "usage": {
+        "prompt_tokens": 358,
+        "completion_tokens": 27,
+        "total_tokens": 385,
+        "prompt_tokens_details": "[REDACTED]",
+        "prompt_cache_hit_tokens": "[REDACTED]",
+        "prompt_cache_miss_tokens": "[REDACTED]"
+      },
+      "finish_reason": "stop",
+      "attempts": [
+        {
+          "attempt": 1,
+          "ok": true,
+          "latency_s": 1.3313558749999999,
+          "usage": {
+            "prompt_tokens": 358,
+            "completion_tokens": 27,
+            "total_tokens": 385,
+            "prompt_tokens_details": "[REDACTED]",
+            "prompt_cache_hit_tokens": "[REDACTED]",
+            "prompt_cache_miss_tokens": "[REDACTED]"
+          }
+        }
+      ]
+    }
+  ],
+  "local_tool_result": "probe"
+}

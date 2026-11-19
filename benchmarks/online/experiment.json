@@ -1,0 +1,451 @@
+{
+  "manifests": {
+    "agent": {
+      "hash": "b3aff23eba581ac020fb6a6bb670c0cbaa67f387f35a8c2dc18d3e688cb09bf7",
+      "identity": {
+        "snapshot": {
+          "tasks": [
+            {
+              "id": "fulltext-01",
+              "type": "rubric",
+              "question": "For NeRF 2003.08934v2, what batch unit and size are used, and what are Nc and Nf? Cite PDF page numbers.",
+              "reference_answer": "4096 rays; Nc=64 coarse coordinates and Nf=128 additional fine coordinates; PDF p.9.",
+              "reference_sources": [
+                {
+                  "paper_id": "2003.08934v2",
+                  "url": "https://arxiv.org/pdf/2003.08934v2",
+                  "pdf_pages": [
+                    9
+                  ],
+                  "section": "5.3 Implementation details",
+                  "reference_facts": "Batch: 4096 rays. Coarse samples Nc=64, additional fine samples Nf=128. Adam learning rate starts at 5e-4 and exponentially decays to 5e-5."
+                }
+              ],
+              "rubric": [
+                "Correct unit and all three values.",
+                "Cites PDF page 9 and uses retrieved full-text evidence, not the abstract."
+              ]
+            },
+            {
+              "id": "fulltext-02",
+              "type": "rubric",
+              "question": "For NeRF 2003.08934v2, identify the optimizer and the starting/ending learning rates. Cite the implementation page.",
+              "reference_answer": "Adam, 5e-4 to 5e-5 exponential decay; PDF p.9.",
+              "reference_sources": [
+                {
+                  "paper_id": "2003.08934v2",
+                  "url": "https://arxiv.org/pdf/2003.08934v2",
+                  "pdf_pages": [
+                    9
+                  ],
+                  "section": "5.3 Implementation details",
+                  "reference_facts": "Batch: 4096 rays. Coarse samples Nc=64, additional fine samples Nf=128. Adam learning rate starts at 5e-4 and exponentially decays to 5e-5."
+                }
+              ],
+              "rubric": [
+                "Correct Adam and both rates with decay.",
+                "Cites PDF page 9 with actual supporting chunks."
+              ]
+            },
+            {
+              "id": "fulltext-03",
+              "type": "rubric",
+              "question": "For DDPM 2006.11239v2, give T and the endpoints and shape of the forward beta schedule. Cite PDF page numbers.",
+              "reference_answer": "T=1000; linear beta from 1e-4 to 0.02; PDF p.5.",
+              "reference_sources": [
+                {
+                  "paper_id": "2006.11239v2",
+                  "url": "https://arxiv.org/pdf/2006.11239v2",
+                  "pdf_pages": [
+                    5,
+                    14,
+                    15
+                  ],
+                  "section": "4 Experiments; Appendix B",
+                  "reference_facts": "T=1000; beta linearly increases from 1e-4 to 0.02. Adam learning rate 2e-4, reduced to 2e-5 for 256x256 images. Batch 128 for CIFAR10, 64 for larger images."
+                }
+              ],
+              "rubric": [
+                "All constants and linear shape correct.",
+                "Cites PDF page 5 or corroborating Appendix B page 14 with retrieved evidence."
+              ]
+            },
+            {
+              "id": "fulltext-04",
+              "type": "rubric",
+              "question": "For DDPM 2006.11239v2, what learning rate changes for 256x256 images, and what two batch sizes are reported? Cite PDF pages.",
+              "reference_answer": "Adam learning rate drops from 2e-4 to 2e-5; CIFAR10 batch128, larger images batch64; Appendix B PDF pp.14–15.",
+              "reference_sources": [
+                {
+                  "paper_id": "2006.11239v2",
+                  "url": "https://arxiv.org/pdf/2006.11239v2",
+                  "pdf_pages": [
+                    5,
+                    14,
+                    15
+                  ],
+                  "section": "4 Experiments; Appendix B",
+                  "reference_facts": "T=1000; beta linearly increases from 1e-4 to 0.02. Adam learning rate 2e-4, reduced to 2e-5 for 256x256 images. Batch 128 for CIFAR10, 64 for larger images."
+                }
+              ],
+              "rubric": [
+                "Correct both rates and image-size distinction.",
+                "Correct both batch sizes and associated image groups.",
+                "Cites Appendix B PDF pages 14–15 with real chunks."
+              ]
+            },
+            {
+              "id": "fulltext-05",
+              "type": "rubric",
+              "question": "Compare learning-rate schedules in NeRF 2003.08934v2 and DDPM 2006.11239v2. Do not confuse within-run decay with settings for different image sizes; cite both papers and PDF pages.",
+              "reference_answer": "NeRF uses within-run exponential decay 5e-4 to 5e-5 (p.9); DDPM reports 2e-4 versus2e-5 for256x256 (p.14), not an assertion of the same decay schedule.",
+              "reference_sources": [
+                {
+                  "paper_id": "2003.08934v2",
+                  "url": "https://arxiv.org/pdf/2003.08934v2",
+                  "pdf_pages": [
+                    9
+                  ],
+                  "section": "5.3 Implementation details",
+                  "reference_facts": "Batch: 4096 rays. Coarse samples Nc=64, additional fine samples Nf=128. Adam learning rate starts at 5e-4 and exponentially decays to 5e-5."
+                },
+                {
+                  "paper_id": "2006.11239v2",
+                  "url": "https://arxiv.org/pdf/2006.11239v2",
+                  "pdf_pages": [
+                    5,
+                    14,
+                    15
+                  ],
+                  "section": "4 Experiments; Appendix B",
+                  "reference_facts": "T=1000; beta linearly increases from 1e-4 to 0.02. Adam learning rate 2e-4, reduced to 2e-5 for 256x256 images. Batch 128 for CIFAR10, 64 for larger images."
+                }
+              ],
+              "rubric": [
+                "Correctly distinguishes decay versus resolution-specific settings.",
+                "All four rates correct and both PDF sources cited."
+              ]
+            },
+            {
+              "id": "fulltext-06",
+              "type": "unanswerable",
+              "question": "Using these papers, compute NeRF PSNR on my private scene. I have supplied neither my images nor ground truth.",
+              "reference_answer": "Cannot compute private-scene PSNR without images, ground truth and an evaluation tool; paper values cannot substitute.",
+              "reference_sources": [
+                {
+                  "paper_id": "2003.08934v2",
+                  "url": "https://arxiv.org/pdf/2003.08934v2",
+                  "pdf_pages": [
+                    9
+                  ],
+                  "section": "5.3 Implementation details",
+                  "reference_facts": "Batch: 4096 rays. Coarse samples Nc=64, additional fine samples Nf=128. Adam learning rate starts at 5e-4 and exponentially decays to 5e-5."
+                }
+              ],
+              "rubric": [
+                "Explicitly states missing private data and execution capability.",
+                "Does not fabricate a numeric measurement."
+              ]
+            }
+          ],
+          "config": {
+            "adapter": "paper_agent_eval.papers:factory",
+            "mode": "online",
+            "context": "",
+            "cache": ".cache/arxiv",
+            "cache_only": true,
+            "max_turns": 8,
+            "max_context_chars": 60000,
+            "artifacts": [
+              ".cache/arxiv/2003.08934v2/manifest.json",
+              ".cache/arxiv/2003.08934v2/index.json",
+              ".cache/arxiv/2003.08934v2/paper.pdf",
+              ".cache/arxiv/2006.11239v2/manifest.json",
+              ".cache/arxiv/2006.11239v2/index.json",
+              ".cache/arxiv/2006.11239v2/paper.pdf"
+            ]
+          },
+          "code": {
+            "metrics.py": "5562d86b7a5011c1c7afcbfde9aead5fe537a4a6982f4bf281f1aebdd6f8b3d4",
+            "grading.py": "8f480539f333b218737adf6bae10cca75783f1ff2905b8fee8cd319b5b3cb7c6",
+            "arxiv.py": "a5d4eda1c18e8343b84c90ee177c23f63f7c03d41ab393765cde654205ba5e85",
+            "provider.py": "fcf569c716ad259b5f9e0db530746d73225800ffc6bce66ca2b838ea6a8696f0",
+            "util.py": "41b05bfa956ce288c4239b2bb5c1fe48f8c1b51d49eb50a6732061bae4336727",
+            "budget.py": "aafc35cb9e23d8cecd8111816d9d53d6d3940b544381dbb7f935f71c65ede97d",
+            "evaluation.py": "8e2b160a59e5fe7243b8719cf4698aac14bafdab36c7d8952f3230e6e1049ec9",
+            "papers.py": "435d831fadb79fe0ef25fca7a4273908f11c9b5cc7d3beb0c29c5b5667ce74f3",
+            "__init__.py": "a2a61f6fb01217f70abb84b3e029f201a6e6bb7489ebc891acd818e9b28af41c",
+            "cli.py": "3f24a895ef02fc0c90f03364150a84f0d2b456bdac3d50570f32f1baa5c9d002",
+            "example.py": "18883866808d167e695a26aac42556f3c6d2f7cd827abdd3884d472aa1363634",
+            "retrieval.py": "b61b6545016bf4458588f1dc6a00440f3cbba19f678aeb54ec367848e3e5f5fe",
+            "agent.py": "937fcb0c8b768d36acb56d416c9c79ddd53e7b3b422fc53457e5aaef93e2f9fd",
+            "contracts.py": "eaa4ba585c0ad1ece49b4ce989d4c90434db3f7d23216ce5ff1e4abb8c8690b6",
+            "pdfworker.py": "12c8e89cf29be6b4f9bec0077d99ef62b4469dbd3d60c66bdf17c7e89aa502ce",
+            "pdfkit.swift": "c341254eb2469647583ecac25b7aa1bf17f47432ea201608e6dd3a07e06f7031",
+            "history.py": "dadf19c1155f38ad80329ece3db2aabe7f51f44eccf0dcf2553f6ccf72582c61",
+            "data/manifest.json": "cbc57f0975432342e60b6b8a39e9fbf5f2578e57b28b7f0cff90f9f7923d993a",
+            "data/pricing.json": "4d9503248f8883b6d8e06e9411a9abd3f5a887b4f201d5b4697f636351003cee",
+            "data/fixed/2011.13456.json": "e52422b1736baa3bf52b350524c8045413e239d15a680247820d7d5a7dafd18e",
+            "data/fixed/2006.11239.json": "7afde9c62b381e34423ee408519f373080b10768dde92f9be495b6aeea704a13",
+            "data/fixed/2208.11970.json": "edae341b2f8d2a8fc8136200371b880f3453541a04aa1856636dd0e716f061a1",
+            "data/fixed/2212.09748.json": "04f11a2985a85717459925c094c5eabc21a76b81bd492fac53fbc48c27d8a004",
+            "data/fixed/2112.10752.json": "041608efebb893c970ed7f466d26ac525a603496d4eb5274f708394930a5b549",
+            "data/fixed/2210.02747.json": "012496c031a48cecdd68164b19e8e0dcdbe2d632e5ade90746329938ca611f15",
+            "data/fixed/2406.09756.json": "ec822761a53b4466a17b9d33be1d86a584c87a42097bf6b2c782f6f08ace76f7",
+            "data/fixed/2312.14132.json": "5866269d02487edcb4ee7585df5500d0b2200c22669265d8c310773cd989c625",
+            "data/fixed/2003.08934.json": "ec646c6a61dd20d495bafd230bb6e17141f46a46bee7c72578120642f1caaa52",
+            "data/fixed/2010.02502.json": "e54b90dd2fb59eddc619ac467bba146803b2f2af29514e4753ac63cd290b33e5"
+          },
+          "artifacts": {
+            ".cache/arxiv/2003.08934v2/manifest.json": "b4ccaeee1652e0ae4e088b5e44e48e91d1c050e131864c0efcb52fffbaea5625",
+            ".cache/arxiv/2003.08934v2/index.json": "469a8ebe1a43d58d969daedefd891bf9ce549fde34604575f3c8f768c475d584",
+            ".cache/arxiv/2003.08934v2/paper.pdf": "c7fc70b38f84cb2e42890a69a7c9b9c26ded464b221e0355031004f24fb8e727",
+            ".cache/arxiv/2006.11239v2/manifest.json": "03dea8afd6a65bf2d0adcfea7057212d34676ef4132da554f0e512df702932e1",
+            ".cache/arxiv/2006.11239v2/index.json": "abb1cb255b8f1daa8b9168441bd5c5caa6748d249c7c2ec8dd1b4affc22e239a",
+            ".cache/arxiv/2006.11239v2/paper.pdf": "aee5e07a802e8dfd2a386374c94fd61d1d056cb7e1e0fec4f28e8120ff5d8505",
+            "adapter_source": "435d831fadb79fe0ef25fca7a4273908f11c9b5cc7d3beb0c29c5b5667ce74f3"
+          },
+          "version": 2
+        },
+        "exact_policy": "strict",
+        "model": "deepseek-v4-pro",
+        "max_output": 1800,
+        "request_config": {
+          "timeout": 45,
+          "retries": 1,
+          "thinking": false,
+          "temperature": 0.2,
+          "judge_temperature": 0
+        }
+      },
+      "system": "agent",
+      "run_id": "fulltext-main"
+    },
+    "baseline": {
+      "hash": "b3aff23eba581ac020fb6a6bb670c0cbaa67f387f35a8c2dc18d3e688cb09bf7",
+      "identity": {
+        "snapshot": {
+          "tasks": [
+            {
+              "id": "fulltext-01",
+              "type": "rubric",
+              "question": "For NeRF 2003.08934v2, what batch unit and size are used, and what are Nc and Nf? Cite PDF page numbers.",
+              "reference_answer": "4096 rays; Nc=64 coarse coordinates and Nf=128 additional fine coordinates; PDF p.9.",
+              "reference_sources": [
+                {
+                  "paper_id": "2003.08934v2",
+                  "url": "https://arxiv.org/pdf/2003.08934v2",
+                  "pdf_pages": [
+                    9
+                  ],
+                  "section": "5.3 Implementation details",
+                  "reference_facts": "Batch: 4096 rays. Coarse samples Nc=64, additional fine samples Nf=128. Adam learning rate starts at 5e-4 and exponentially decays to 5e-5."
+                }
+              ],
+              "rubric": [
+                "Correct unit and all three values.",
+                "Cites PDF page 9 and uses retrieved full-text evidence, not the abstract."
+              ]
+            },
+            {
+              "id": "fulltext-02",
+              "type": "rubric",
+              "question": "For NeRF 2003.08934v2, identify the optimizer and the starting/ending learning rates. Cite the implementation page.",
+              "reference_answer": "Adam, 5e-4 to 5e-5 exponential decay; PDF p.9.",
+              "reference_sources": [
+                {
+                  "paper_id": "2003.08934v2",
+                  "url": "https://arxiv.org/pdf/2003.08934v2",
+                  "pdf_pages": [
+                    9
+                  ],
+                  "section": "5.3 Implementation details",
+                  "reference_facts": "Batch: 4096 rays. Coarse samples Nc=64, additional fine samples Nf=128. Adam learning rate starts at 5e-4 and exponentially decays to 5e-5."
+                }
+              ],
+              "rubric": [
+                "Correct Adam and both rates with decay.",
+                "Cites PDF page 9 with actual supporting chunks."
+              ]
+            },
+            {
+              "id": "fulltext-03",
+              "type": "rubric",
+              "question": "For DDPM 2006.11239v2, give T and the endpoints and shape of the forward beta schedule. Cite PDF page numbers.",
+              "reference_answer": "T=1000; linear beta from 1e-4 to 0.02; PDF p.5.",
+              "reference_sources": [
+                {
+                  "paper_id": "2006.11239v2",
+                  "url": "https://arxiv.org/pdf/2006.11239v2",
+                  "pdf_pages": [
+                    5,
+                    14,
+                    15
+                  ],
+                  "section": "4 Experiments; Appendix B",
+                  "reference_facts": "T=1000; beta linearly increases from 1e-4 to 0.02. Adam learning rate 2e-4, reduced to 2e-5 for 256x256 images. Batch 128 for CIFAR10, 64 for larger images."
+                }
+              ],
+              "rubric": [
+                "All constants and linear shape correct.",
+                "Cites PDF page 5 or corroborating Appendix B page 14 with retrieved evidence."
+              ]
+            },
+            {
+              "id": "fulltext-04",
+              "type": "rubric",
+              "question": "For DDPM 2006.11239v2, what learning rate changes for 256x256 images, and what two batch sizes are reported? Cite PDF pages.",
+              "reference_answer": "Adam learning rate drops from 2e-4 to 2e-5; CIFAR10 batch128, larger images batch64; Appendix B PDF pp.14–15.",
+              "reference_sources": [
+                {
+                  "paper_id": "2006.11239v2",
+                  "url": "https://arxiv.org/pdf/2006.11239v2",
+                  "pdf_pages": [
+                    5,
+                    14,
+                    15
+                  ],
+                  "section": "4 Experiments; Appendix B",
+                  "reference_facts": "T=1000; beta linearly increases from 1e-4 to 0.02. Adam learning rate 2e-4, reduced to 2e-5 for 256x256 images. Batch 128 for CIFAR10, 64 for larger images."
+                }
+              ],
+              "rubric": [
+                "Correct both rates and image-size distinction.",
+                "Correct both batch sizes and associated image groups.",
+                "Cites Appendix B PDF pages 14–15 with real chunks."
+              ]
+            },
+            {
+              "id": "fulltext-05",
+              "type": "rubric",
+              "question": "Compare learning-rate schedules in NeRF 2003.08934v2 and DDPM 2006.11239v2. Do not confuse within-run decay with settings for different image sizes; cite both papers and PDF pages.",
+              "reference_answer": "NeRF uses within-run exponential decay 5e-4 to 5e-5 (p.9); DDPM reports 2e-4 versus2e-5 for256x256 (p.14), not an assertion of the same decay schedule.",
+              "reference_sources": [
+                {
+                  "paper_id": "2003.08934v2",
+                  "url": "https://arxiv.org/pdf/2003.08934v2",
+                  "pdf_pages": [
+                    9
+                  ],
+                  "section": "5.3 Implementation details",
+                  "reference_facts": "Batch: 4096 rays. Coarse samples Nc=64, additional fine samples Nf=128. Adam learning rate starts at 5e-4 and exponentially decays to 5e-5."
+                },
+                {
+                  "paper_id": "2006.11239v2",
+                  "url": "https://arxiv.org/pdf/2006.11239v2",
+                  "pdf_pages": [
+                    5,
+                    14,
+                    15
+                  ],
+                  "section": "4 Experiments; Appendix B",
+                  "reference_facts": "T=1000; beta linearly increases from 1e-4 to 0.02. Adam learning rate 2e-4, reduced to 2e-5 for 256x256 images. Batch 128 for CIFAR10, 64 for larger images."
+                }
+              ],
+              "rubric": [
+                "Correctly distinguishes decay versus resolution-specific settings.",
+                "All four rates correct and both PDF sources cited."
+              ]
+            },
+            {
+              "id": "fulltext-06",
+              "type": "unanswerable",
+              "question": "Using these papers, compute NeRF PSNR on my private scene. I have supplied neither my images nor ground truth.",
+              "reference_answer": "Cannot compute private-scene PSNR without images, ground truth and an evaluation tool; paper values cannot substitute.",
+              "reference_sources": [
+                {
+                  "paper_id": "2003.08934v2",
+                  "url": "https://arxiv.org/pdf/2003.08934v2",
+                  "pdf_pages": [
+                    9
+                  ],
+                  "section": "5.3 Implementation details",
+                  "reference_facts": "Batch: 4096 rays. Coarse samples Nc=64, additional fine samples Nf=128. Adam learning rate starts at 5e-4 and exponentially decays to 5e-5."
+                }
+              ],
+              "rubric": [
+                "Explicitly states missing private data and execution capability.",
+                "Does not fabricate a numeric measurement."
+              ]
+            }
+          ],
+          "config": {
+            "adapter": "paper_agent_eval.papers:factory",
+            "mode": "online",
+            "context": "",
+            "cache": ".cache/arxiv",
+            "cache_only": true,
+            "max_turns": 8,
+            "max_context_chars": 60000,
+            "artifacts": [
+              ".cache/arxiv/2003.08934v2/manifest.json",
+              ".cache/arxiv/2003.08934v2/index.json",
+              ".cache/arxiv/2003.08934v2/paper.pdf",
+              ".cache/arxiv/2006.11239v2/manifest.json",
+              ".cache/arxiv/2006.11239v2/index.json",
+              ".cache/arxiv/2006.11239v2/paper.pdf"
+            ]
+          },
+          "code": {
+            "metrics.py": "5562d86b7a5011c1c7afcbfde9aead5fe537a4a6982f4bf281f1aebdd6f8b3d4",
+            "grading.py": "8f480539f333b218737adf6bae10cca75783f1ff2905b8fee8cd319b5b3cb7c6",
+            "arxiv.py": "a5d4eda1c18e8343b84c90ee177c23f63f7c03d41ab393765cde654205ba5e85",
+            "provider.py": "fcf569c716ad259b5f9e0db530746d73225800ffc6bce66ca2b838ea6a8696f0",
+            "util.py": "41b05bfa956ce288c4239b2bb5c1fe48f8c1b51d49eb50a6732061bae4336727",
+            "budget.py": "aafc35cb9e23d8cecd8111816d9d53d6d3940b544381dbb7f935f71c65ede97d",
+            "evaluation.py": "8e2b160a59e5fe7243b8719cf4698aac14bafdab36c7d8952f3230e6e1049ec9",
+            "papers.py": "435d831fadb79fe0ef25fca7a4273908f11c9b5cc7d3beb0c29c5b5667ce74f3",
+            "__init__.py": "a2a61f6fb01217f70abb84b3e029f201a6e6bb7489ebc891acd818e9b28af41c",
+            "cli.py": "3f24a895ef02fc0c90f03364150a84f0d2b456bdac3d50570f32f1baa5c9d002",
+            "example.py": "18883866808d167e695a26aac42556f3c6d2f7cd827abdd3884d472aa1363634",
+            "retrieval.py": "b61b6545016bf4458588f1dc6a00440f3cbba19f678aeb54ec367848e3e5f5fe",
+            "agent.py": "937fcb0c8b768d36acb56d416c9c79ddd53e7b3b422fc53457e5aaef93e2f9fd",
+            "contracts.py": "eaa4ba585c0ad1ece49b4ce989d4c90434db3f7d23216ce5ff1e4abb8c8690b6",
+            "pdfworker.py": "12c8e89cf29be6b4f9bec0077d99ef62b4469dbd3d60c66bdf17c7e89aa502ce",
+            "pdfkit.swift": "c341254eb2469647583ecac25b7aa1bf17f47432ea201608e6dd3a07e06f7031",
+            "history.py": "dadf19c1155f38ad80329ece3db2aabe7f51f44eccf0dcf2553f6ccf72582c61",
+            "data/manifest.json": "cbc57f0975432342e60b6b8a39e9fbf5f2578e57b28b7f0cff90f9f7923d993a",
+            "data/pricing.json": "4d9503248f8883b6d8e06e9411a9abd3f5a887b4f201d5b4697f636351003cee",
+            "data/fixed/2011.13456.json": "e52422b1736baa3bf52b350524c8045413e239d15a680247820d7d5a7dafd18e",
+            "data/fixed/2006.11239.json": "7afde9c62b381e34423ee408519f373080b10768dde92f9be495b6aeea704a13",
+            "data/fixed/2208.11970.json": "edae341b2f8d2a8fc8136200371b880f3453541a04aa1856636dd0e716f061a1",
+            "data/fixed/2212.09748.json": "04f11a2985a85717459925c094c5eabc21a76b81bd492fac53fbc48c27d8a004",
+            "data/fixed/2112.10752.json": "041608efebb893c970ed7f466d26ac525a603496d4eb5274f708394930a5b549",
+            "data/fixed/2210.02747.json": "012496c031a48cecdd68164b19e8e0dcdbe2d632e5ade90746329938ca611f15",
+            "data/fixed/2406.09756.json": "ec822761a53b4466a17b9d33be1d86a584c87a42097bf6b2c782f6f08ace76f7",
+            "data/fixed/2312.14132.json": "5866269d02487edcb4ee7585df5500d0b2200c22669265d8c310773cd989c625",
+            "data/fixed/2003.08934.json": "ec646c6a61dd20d495bafd230bb6e17141f46a46bee7c72578120642f1caaa52",
+            "data/fixed/2010.02502.json": "e54b90dd2fb59eddc619ac467bba146803b2f2af29514e4753ac63cd290b33e5"
+          },
+          "artifacts": {
+            ".cache/arxiv/2003.08934v2/manifest.json": "b4ccaeee1652e0ae4e088b5e44e48e91d1c050e131864c0efcb52fffbaea5625",
+            ".cache/arxiv/2003.08934v2/index.json": "469a8ebe1a43d58d969daedefd891bf9ce549fde34604575f3c8f768c475d584",
+            ".cache/arxiv/2003.08934v2/paper.pdf": "c7fc70b38f84cb2e42890a69a7c9b9c26ded464b221e0355031004f24fb8e727",
+            ".cache/arxiv/2006.11239v2/manifest.json": "03dea8afd6a65bf2d0adcfea7057212d34676ef4132da554f0e512df702932e1",
+            ".cache/arxiv/2006.11239v2/index.json": "abb1cb255b8f1daa8b9168441bd5c5caa6748d249c7c2ec8dd1b4affc22e239a",
+            ".cache/arxiv/2006.11239v2/paper.pdf": "aee5e07a802e8dfd2a386374c94fd61d1d056cb7e1e0fec4f28e8120ff5d8505",
+            "adapter_source": "435d831fadb79fe0ef25fca7a4273908f11c9b5cc7d3beb0c29c5b5667ce74f3"
+          },
+          "version": 2
+        },
+        "exact_policy": "strict",
+        "model": "deepseek-v4-pro",
+        "max_output": 1800,
+        "request_config": {
+          "timeout": 45,
+          "retries": 1,
+          "thinking": false,
+          "temperature": 0.2,
+          "judge_temperature": 0
+        }
+      },
+      "system": "baseline",
+      "run_id": "fulltext-main"
+    }
+  },
+  "original_record_sha256": {
+    "agent": "82d27951a4abf53fdbff07f468236bca364776c023030140ec2beab6ec2a7d0f",
+    "baseline": "ada60281aa3ca222f4669dd87513dc8b14895b3c396692dad7d7240a78f7907b"
+  },
+  "export_policy": "Scores, timing, usage and tool arguments unchanged. Answers retained except any long PDF-quotation response, explicitly omitted with its original hash; raw response stays unchanged locally. Retrieved full-text passages replaced by page, start, length and SHA-256; raw judge input omitted. No downloaded PDFs/indexes/full text published."
+}

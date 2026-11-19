@@ -1,0 +1,16 @@
+{
+  "model": "deepseek-v4-pro",
+  "requests": 41,
+  "reported_prompt_tokens": 52633,
+  "reported_completion_tokens": 8413,
+  "reported_total_tokens": 61046,
+  "exposure_usd": 0.12848880000000001,
+  "uncertain_groups": 0,
+  "ceiling_usd": 5,
+  "stop_threshold_usd": 4.5,
+  "scope": "ALL new preflight, tool roundtrip, smoke, judge calibration, formal Agent, baseline, judge and retries; excludes historical experiment",
+  "basis": "Conservative usage-based estimate + unresolved reservations, NOT provider invoice",
+  "price_source": "https://api-docs.deepseek.com/quick_start/pricing/",
+  "checked_utc_date": "2026-11-18",
+  "safety_multiplier": 1.25
+}

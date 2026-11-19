@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-18",
+  "offline_tests": 24,
+  "clean_installed_tests_passed": true,
+  "own_pdf_parser": "macOS PDFKit",
+  "historical_records_compared": 250,
+  "historical_numeric_and_trace_fields_unchanged": true,
+  "task_questions_expected_and_rubrics_unchanged": true,
+  "nonpaper_example_passed": true,
+  "network_search": "passed; real arXiv search and two versioned PDFs downloaded/indexed",
+  "new_paid_requests": 41,
+  "new_prompt_tokens": 52633,
+  "new_completion_tokens": 8413,
+  "new_estimated_usd": 0.1284888,
+  "online_model_scores": {
+    "agent": {
+      "passed": 6,
+      "total": 6
+    },
+    "baseline": {
+      "passed": 1,
+      "total": 6
+    }
+  },
+  "publication": "Authenticated personal owner verified; public release and post-push checks handled by release procedure",
+  "portable_pdf_parser": "pypdf/6.21.4"
+}

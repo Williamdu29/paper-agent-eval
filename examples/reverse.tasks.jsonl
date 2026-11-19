@@ -1,0 +1,2 @@
+{"id":"reverse-1","type":"exact","question":"drawer","expected":["reward"]}
+{"id":"reverse-2","type":"exact","question":"abc","expected":["cba"]}

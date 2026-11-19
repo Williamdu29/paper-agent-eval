@@ -1,0 +1,25 @@
+{
+  "historical_version": "9c9a67dd892aa020b014ea2f79038aa0b0522b224dfa29382d1beb04e94bee42",
+  "original_records_sha256": "3b3224c949737a72b2785dc94780792134a2ee815e5368e29d5337fb6087785d",
+  "original_tasks_sha256": "06b22cbaa35723b97ac24d357eaa64b00247e196bdf4dbdee9f2d10e95ba7e21",
+  "original_code_hashes": {
+    "eval.py": "2f9b7d052c7be9b83c6ae73a18bf182670a74ad6d57a30020c9b279929e5cca6",
+    "harness/core.py": "e7f2ae3621d6b2a62cae9eb88ee6cf2b9940a9e48a184d1abf75f13140f3d8e4",
+    "harness/report.py": "00c90cc69136c62c38a7ad6e54d30f785e150f6bea86cff2f1606bc2c4a6e48a",
+    "project_adapter.py": "6c120765270edbe1988215e14727bab5b2b26eb86314ae23ff15df521c01c26c"
+  },
+  "sanitization": "Removed local config and redundant filesystem references from records; tasks source paths made portable. Answers, messages, tool calls, grades, latencies and token usage unchanged. No original private paths or credentials exported.",
+  "generation_config": {
+    "thinking": false,
+    "temperature": 0.2,
+    "max_tokens": 1800,
+    "max_turns": 8,
+    "timeout": 60,
+    "retries": 2
+  },
+  "provider": {
+    "model": "deepseek-v4-pro",
+    "judge_model": "deepseek-v4-pro",
+    "base_url": "https://api.deepseek.com"
+  }
+}

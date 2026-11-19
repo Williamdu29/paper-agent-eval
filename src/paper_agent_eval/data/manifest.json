@@ -1,0 +1,106 @@
+{
+  "version": "fixed-abstracts-v1-portable",
+  "license": "arXiv descriptive metadata CC0 1.0; paper content has separate licenses",
+  "papers": [
+    {
+      "id": "2003.08934",
+      "title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+      "authors": "Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng",
+      "source": "https://arxiv.org/abs/2003.08934v2",
+      "version": "v2",
+      "retrieved_date": "2026-11-16",
+      "sha256": "ec646c6a61dd20d495bafd230bb6e17141f46a46bee7c72578120642f1caaa52",
+      "scope": "abstract and metadata only"
+    },
+    {
+      "id": "2006.11239",
+      "title": "Denoising Diffusion Probabilistic Models",
+      "authors": "Jonathan Ho, Ajay Jain, Pieter Abbeel",
+      "source": "https://arxiv.org/abs/2006.11239v2",
+      "version": "v2",
+      "retrieved_date": "2026-11-16",
+      "sha256": "7afde9c62b381e34423ee408519f373080b10768dde92f9be495b6aeea704a13",
+      "scope": "abstract and metadata only"
+    },
+    {
+      "id": "2010.02502",
+      "title": "Denoising Diffusion Implicit Models",
+      "authors": "Jiaming Song, Chenlin Meng, Stefano Ermon",
+      "source": "https://arxiv.org/abs/2010.02502v4",
+      "version": "v4",
+      "retrieved_date": "2026-11-16",
+      "sha256": "e54b90dd2fb59eddc619ac467bba146803b2f2af29514e4753ac63cd290b33e5",
+      "scope": "abstract and metadata only"
+    },
+    {
+      "id": "2011.13456",
+      "title": "Score-Based Generative Modeling through Stochastic Differential Equations",
+      "authors": "Yang Song, Jascha Sohl-Dickstein, Diederik P. Kingma, Abhishek Kumar, Stefano Ermon, Ben Poole",
+      "source": "https://arxiv.org/abs/2011.13456v2",
+      "version": "v2",
+      "retrieved_date": "2026-11-16",
+      "sha256": "e52422b1736baa3bf52b350524c8045413e239d15a680247820d7d5a7dafd18e",
+      "scope": "abstract and metadata only"
+    },
+    {
+      "id": "2112.10752",
+      "title": "High-Resolution Image Synthesis with Latent Diffusion Models",
+      "authors": "Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer",
+      "source": "https://arxiv.org/abs/2112.10752v2",
+      "version": "v2",
+      "retrieved_date": "2026-11-16",
+      "sha256": "041608efebb893c970ed7f466d26ac525a603496d4eb5274f708394930a5b549",
+      "scope": "abstract and metadata only"
+    },
+    {
+      "id": "2208.11970",
+      "title": "Understanding Diffusion Models: A Unified Perspective",
+      "authors": "Calvin Luo",
+      "source": "https://arxiv.org/abs/2208.11970v1",
+      "version": "v1",
+      "retrieved_date": "2026-11-16",
+      "sha256": "edae341b2f8d2a8fc8136200371b880f3453541a04aa1856636dd0e716f061a1",
+      "scope": "abstract and metadata only"
+    },
+    {
+      "id": "2210.02747",
+      "title": "Flow Matching for Generative Modeling",
+      "authors": "Yaron Lipman, Ricky T. Q. Chen, Heli Ben-Hamu, Maximilian Nickel, Matt Le",
+      "source": "https://arxiv.org/abs/2210.02747v2",
+      "version": "v2",
+      "retrieved_date": "2026-11-16",
+      "sha256": "012496c031a48cecdd68164b19e8e0dcdbe2d632e5ade90746329938ca611f15",
+      "scope": "abstract and metadata only"
+    },
+    {
+      "id": "2212.09748",
+      "title": "Scalable Diffusion Models with Transformers",
+      "authors": "William Peebles, Saining Xie",
+      "source": "https://arxiv.org/abs/2212.09748v2",
+      "version": "v2",
+      "retrieved_date": "2026-11-16",
+      "sha256": "04f11a2985a85717459925c094c5eabc21a76b81bd492fac53fbc48c27d8a004",
+      "scope": "abstract and metadata only"
+    },
+    {
+      "id": "2312.14132",
+      "title": "DUSt3R: Geometric 3D Vision Made Easy",
+      "authors": "Shuzhe Wang, Vincent Leroy, Yohann Cabon, Boris Chidlovskii, Jerome Revaud",
+      "source": "https://arxiv.org/abs/2312.14132v3",
+      "version": "v3",
+      "retrieved_date": "2026-11-16",
+      "sha256": "5866269d02487edcb4ee7585df5500d0b2200c22669265d8c310773cd989c625",
+      "scope": "abstract and metadata only"
+    },
+    {
+      "id": "2406.09756",
+      "title": "Grounding Image Matching in 3D with MASt3R",
+      "authors": "Vincent Leroy, Yohann Cabon, Jérôme Revaud",
+      "source": "https://arxiv.org/abs/2406.09756v1",
+      "version": "v1",
+      "retrieved_date": "2026-11-16",
+      "sha256": "ec822761a53b4466a17b9d33be1d86a584c87a42097bf6b2c782f6f08ace76f7",
+      "scope": "abstract and metadata only"
+    }
+  ]
+}
